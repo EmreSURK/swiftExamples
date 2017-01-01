@@ -14,8 +14,8 @@ public class BaseClass{
         let errCode = (response.result.value as! NSDictionary).object(forKey: "ErrorCode") as? String
         if errCode != nil {
             let errMessage = (response.result.value as! NSDictionary).object(forKey: "ErrorMessage") as! String
-            let alert = UIAlertController(title: "Hata", message: errMessage, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+            let alert = UIAlertController(title: "Error", message: errMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             if viewController != nil {
                 viewController?.present(alert, animated: true, completion: nil)
             }
