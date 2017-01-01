@@ -3,7 +3,7 @@ Some personel solutions to general problems.
 This solutions may not the best. They only include personel offers to solve some problems.
 
 ## Detecting Service Error
-**Problem:** While developing apps you connect enpoints almost everytime.So, you must check if any error like connection problems or non-authorized state, missing or wrong data structure etc. And checking these error types in every endpoint connection is really long, ugly and hard-to-maintenance.
+**Problem:** While developing apps you connect endpoints almost everytime.So, you must check if any error like connection problems or non-authorized state, missing or wrong data structure etc. And checking these error types in every endpoint connection is really long, ugly and hard-to-maintenance.
 **Offer:** Create a single class and only function to catch and display errors.
 
 Error Detector Class Example : 
