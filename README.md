@@ -11,7 +11,7 @@ Error Detector Class Example :
 
 ```swift
 public class BaseClass{
-  func getErrorAlertIfAnyError(response : Alamofire.DataResponse<Any>, viewController : UIViewController? ) -> Bool {
+  func checkIfAnyErrorCode(response : Alamofire.DataResponse<Any>, viewController : UIViewController? ) -> Bool {
         let errCode = (response.result.value as! NSDictionary).object(forKey: "ErrorCode") as? String
         if errCode != nil {
             let errMessage = (response.result.value as! NSDictionary).object(forKey: "ErrorMessage") as! String
@@ -33,19 +33,19 @@ public class BaseClass{
 if ErrorCode is not nil this will return **true** and **show** an alert that shows ErrorMessage
 
 ```swift
-let error = BaseClass().getErrorAlertIfAnyError(response: response, viewController: self)
+let error = BaseClass().checkIfAnyErrorCode(response: response, viewController: self)
 ```
 
 if ErrorCode is not nil this will return **true** and **but won't show** an alert that shows ErrorMessage
 
 ```swift
-let error = BaseClass().getErrorAlertIfAnyError(response: response, viewController: nil)
+let error = BaseClass().getErrorIfAny(response: response, viewController: nil)
 ```
 
 You can use `return` to avoid running code below.
 
 ```swift
-let error = BaseClass().getErrorAlertIfAnyError(response: response, viewController: self)
+let error = BaseClass().checkIfAnyErrorCode(response: response, viewController: self)
 if error { return; }
 ```
 
